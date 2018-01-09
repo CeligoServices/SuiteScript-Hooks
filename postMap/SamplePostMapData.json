@@ -1,0 +1,63 @@
+{
+  "postMapData": [
+    {
+      "nlobjRecordType": "customrecord_amd",
+      "nlobjFieldIds": {
+        "custrecord1411": 2481,
+        "name": "Demo Demo 1"
+        "internalid": 601
+      },
+      "nlobjSublistIds": {},
+      "documentIndex": 0,
+      "exportedDoc": {
+        "attributes": {
+          "type": "Advanced_Mapping_Demo__c",
+          "url": "/services/data/v40.0/sobjects/Advanced_Mapping_Demo__c/a0H0a00000TU7I8EAL"
+        },
+        "Id": "a0H0a00000TU7I8EAL",
+        "OwnerId": "005j000000BdOU7AAN",
+        "IsDeleted": false,
+        "Name": "Demo 1",
+        "CreatedDate": "2017-10-04T16:33:55.000+0000",
+        "CreatedById": "005j000000BdOU7AAN",
+        "LastModifiedDate": "2017-10-04T16:33:55.000+0000",
+        "LastModifiedById": "005j000000BdOU7AAN",
+        "SystemModstamp": "2017-12-01T01:17:10.000+0000",
+        "Date_Field__c": "2017-10-04",
+        "Decimal_Field__c": 52.13,
+        "Picklist__c": "Demo",
+        "Account__c": "001j000000KezuPAAR",
+        "Checkbox__c": true,
+        "Text__c": "Some Text",
+        "Number_Field2__c": 10
+      }
+    }
+  ],
+  "preMapData": [
+    {
+      "attributes": {
+        "type": "Advanced_Mapping_Demo__c",
+        "url": "/services/data/v40.0/sobjects/Advanced_Mapping_Demo__c/a0H0a00000TU7I8EAL"
+      },
+      "Id": "a0H0a00000TU7I8EAL",
+      "OwnerId": "005j000000BdOU7AAN",
+      "IsDeleted": false,
+      "Name": "Demo 1",
+      "CreatedDate": "2017-10-04T16:33:55.000+0000",
+      "CreatedById": "005j000000BdOU7AAN",
+      "LastModifiedDate": "2017-10-04T16:33:55.000+0000",
+      "LastModifiedById": "005j000000BdOU7AAN",
+      "SystemModstamp": "2017-12-01T01:17:10.000+0000",
+      "Date_Field__c": "2017-10-04",
+      "Decimal_Field__c": 52.13,
+      "Picklist__c": "Demo",
+      "Account__c": "001j000000KezuPAAR",
+      "Checkbox__c": true,
+      "Text__c": "Some Text",
+      "Number_Field2__c": 10
+    }
+  ],
+  "settings": {},
+  "_importId": "59d408e5933e0a52ba59051b",
+  "configuration": {}
+}

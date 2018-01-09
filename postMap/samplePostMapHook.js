@@ -27,7 +27,7 @@ var samplePostMapHook = function(options){
 		If there is a single record failure the individual error should be logged in the function called
 		within the try-catch block
 		*/
-		nlapi.logExecution('ERROR', e.name, e.message);
+		nlapiLogExecution('ERROR', e.name, e.message);
 		for (var i = 0; i < response.length; i++) {
 			response[i].data = null;
 			response[i].errors.push({

@@ -24,7 +24,7 @@ var samplePreMapHook = function(options){
 	try {
 		logOptions(options, response);
 	} catch (e) {
-		nlapi.logExecution('ERROR', e.name, e.message);
+		nlapiLogExecution('ERROR', e.name, e.message);
 		/*In the case of a high level failure all records should be marked as failed
 		If there is a single record failure the individual error should be logged in the function called
 		within the try-catch block
