@@ -1,0 +1,19 @@
+{
+  "data": [
+    {
+      "field1": "value1a"
+      "field2": "value2a"
+    },
+    {
+      "field1": "value1b"
+      "field2": "value2b"
+    },
+    {
+      "field1": "value3b"
+      "field2": "value3b"
+    }
+  ],
+  "settings": {},
+  "_importId": "Id of the import that sent the data",
+  "configuration": {}
+}
