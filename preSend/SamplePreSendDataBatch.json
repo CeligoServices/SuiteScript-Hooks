@@ -1,0 +1,35 @@
+{
+	"data": [
+		[{
+			"id": "3",
+			"recordType": "customrecord_test_crt1",
+			"Name": "Corra",
+			"Customer Age": "40",
+			"Customer Email": "abc-corra@yahoo.com",
+			"dataURI": "/app/common/custom/custrecordentry.nl?rectype=548&id=3&compid=TSTDRV1492160"
+		}],
+		[{
+			"id": "1",
+			"recordType": "customrecord_test_crt1",
+			"Name": "John",
+			"Customer Age": "29",
+			"Customer Email": "john12@gmail.com",
+			"dataURI": "/app/common/custom/custrecordentry.nl?rectype=548&id=1&compid=TSTDRV1492160"
+		}],
+		[{
+			"id": "2",
+			"recordType": "customrecord_test_crt1",
+			"Name": "Melissa",
+			"Customer Age": "35",
+			"Customer Email": "fun.melissa@hotmail.com",
+			"dataURI": "/app/common/custom/custrecordentry.nl?rectype=548&id=2&compid=TSTDRV1492160"
+		}]
+	],
+	"preview": false,
+	"settings": {},
+	"_exportId": "Id of the export which has preSend hook",
+	"recordType": "customrecord_test_crt1",
+	"searchId": "123",
+	"skipGrouping": false,
+	"configuration": {}
+}
