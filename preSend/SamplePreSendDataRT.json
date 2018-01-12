@@ -1,0 +1,53 @@
+{
+	"data": {
+		"recordtype": "customer",
+		"id": "1750",
+		"internalid": "1750",
+		"_eml_nkey_": "145516159",
+		"password": "********",
+		"accessrole": {
+			"name": "Customer Center",
+			"internalid": "14"
+		},
+		"datecreated": "12/12/2016 12:32 am",
+		"subsidiary": {
+			"name": "Honeycomb Holdings Inc.",
+			"internalid": "3"
+		},
+		"password2": "********",
+		"customform": {
+			"name": "Ramsey Default Customer Form",
+			"internalid": "16"
+		},
+		"stage": "CUSTOMER",
+		"entityid": "Ashu Gupta",
+		"nameorig": "Ashu Gupta",
+		"shipcity": "New York",
+		"billattention": "attetion",
+		"firstname": "Ashu",
+		"billzip": "12365",
+		"giveaccess": true,
+		"shippingcarrier": {
+			"name": "FedEx/More",
+			"internalid": "nonups"
+		},
+		"taxable": true,
+		"shipping_country": {
+			"name": "United States",
+			"internalid": "US"
+		},
+		"isperson": true,
+		"currid": "1750",
+		"entitystatus": {
+			"name": "CUSTOMER-Closed Won",
+			"internalid": "13"
+		},
+		"shipaddressee": "Ashu Gupta",
+		"primarycurrency": {
+			"name": "USA",
+			"internalid": "1"
+		}
+	},
+	"configuration": {},
+	"settings": ""
+}
