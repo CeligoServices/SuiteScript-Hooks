@@ -1,0 +1,33 @@
+{
+	"responseData": [{
+		"id": 7841,
+		"statusCode": 200,
+		"errors": [],
+		"_json": {
+			"id": 7841
+		}
+	}],
+	"postMapData": [{
+		"nlobjRecordType": "salesorder",
+		"nlobjFieldIds": {
+			"entity": 1750,
+			"custbody_celigo_etail_order_id": "testt1234"
+		},
+		"nlobjSublistIds": {
+			"item": {
+				"lines": [{
+					"item": 1009,
+					"quantity": "1"
+				}]
+			}
+		},
+		"documentIndex": 0
+	}],
+	"preMapData": [{
+		"id": "45",
+		"testname": "hooktest"
+	}],
+	"settings": {},
+	"_importId": "5a66ee8a3a799c725be3d3d2",
+	"configuration": {}
+}
