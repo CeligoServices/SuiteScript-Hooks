@@ -1,0 +1,13 @@
+1. Install NetSuite bundle "Celigo Bundle for 3PL Integrations" (id: 107305) https://system.netsuite.com/app/bundler/bundledetails.nl?sourcecompanyid=TSTDRV1354889&domain=PRODUCTION&config=F&id=107305
+2. Create your integrator.io flow with export to receive inventory levels from your 3PL.
+3. Upload the Celigo.threepl.inventoryComparison.js file to your NetSuite file cabinet
+	a. At the bottom of the file make the following changes:
+		i. Change the itemFilterId property to be the field on the NetSuite item record that will be used to match to the 3PL item name
+		ii. Fill in the locationIds property to identify what NetSuite locations to compare inventory levels to
+		iii. Change the quantityColumnId property to identify what field to get the NetSuite quantity from
+4. Create the import with a NetSuite connection
+	a. Set record type to Celigo Inventory Comparison (add only)
+	b. Set the following mappings
+		i. The subsidiary (1 in not using subsidaries), inventory account, inventory location
+		ii. Set "Create Inventory Adjustment" to false for testing.  If this box is set to true a script will automatically create a inventory adjustment for the variance values
+		iii. At the line level match the 3PL item name and quantity
