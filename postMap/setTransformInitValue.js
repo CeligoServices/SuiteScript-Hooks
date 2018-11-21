@@ -7,10 +7,10 @@ var setTransformInitValue = function(options){
 	
 	//The array that will be returned from this hook to be processed by the mappings
 	var response = [];
-	var locationField = 'location';
-	var locationDefault = null;
-	var shipgroupField = null;
-	var shipgroupDefault = null;
+	var locationField = 'location'; //Header level field that is mapped to pull the location from
+	var locationDefault = null;  //internal id of the inventory location that should be used in the transformation
+	var shipgroupField = null;  //Header level field that is mapped to pull the ship group from
+	var shipgroupDefault = null;  //internal id of the ship group that should be used in the transformation
 
 	for (var i = 0; i < options.postMapData.length; i++) {
 		/* The response object contains of a data array and an error array
