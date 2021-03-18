@@ -1,0 +1,116 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:asp="http://www.aspdotnetstorefront.com/">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<asp:DoItUsernamePwd>
+			<asp:AuthenticationEMail>{{connection.http.unencrypted.Email}}</asp:AuthenticationEMail>
+			<asp:AuthenticationPassword>{{connection.http.encrypted.Password}}</asp:AuthenticationPassword>
+			<asp:XmlInputRequestString>
+				&lt;AspDotNetStorefrontImport Version="7.1"&gt;
+              		{{#each data}}
+					&lt;Product Action="{{#if ProductID}}Update{{else}}Add{{/if}}" EnsureDefaultVariant="true" ID="{{ProductID}}"&gt;
+						{{#if Name}}&lt;Name&gt;{{Name}}&lt;/Name&gt;{{/if}}
+						{{#if Summary}}&lt;Summary&gt;&lt;![CDATA[{{Summary}}]]&gt;&lt;/Summary&gt;{{/if}}
+						{{#if Description}}&lt;Description&gt;&lt;![CDATA[{{Description}}]]&gt;&lt;/Description&gt;{{/if}}
+						{{#if MiscText}}&lt;MiscText&gt;{{MiscText}}&lt;/MiscText&gt;{{/if}}
+						&lt;SKU&gt;{{SKU}}&lt;/SKU&gt;
+						&lt;ManufacturerPartNumber&gt;{{ManufacturerPartNumber}}&lt;/ManufacturerPartNumber&gt;
+						&lt;SE&gt;
+							&lt;SETitle&gt;{{SETitle}}&lt;/SETitle&gt;
+							{{#if SEKeywords}}&lt;SEKeywords&gt;{{SEKeywords}}&lt;/SEKeywords&gt;{{/if}}
+							{{#if SEDescription}}&lt;SEDescription&gt;{{SEDescription}}&lt;/SEDescription&gt;{{/if}}
+							&lt;SEAltText&gt;{{SEAltText}}&lt;/SEAltText&gt;
+						&lt;/SE&gt;
+						&lt;SizeOptionPrompt&gt;{{SizeOptionPrompt}}&lt;/SizeOptionPrompt&gt;
+						&lt;ColorOptionPrompt&gt;{{ColorOptionPrompt}}&lt;/ColorOptionPrompt&gt;
+						&lt;ProductType Name="{{ProductType}}"/&gt;
+						&lt;SalesPrompt Name="ON SALE FOR"/&gt;
+						&lt;TaxClass Name="{{TaxClass}}"/&gt;
+						&lt;Display&gt;
+							&lt;XmlPackage&gt;{{XmlPackage}}&lt;/XmlPackage&gt;
+							&lt;ColWidth&gt;{{ColWidth}}&lt;/ColWidth&gt;
+						&lt;/Display&gt;
+						&lt;Images&gt;
+							&lt;ImageFilenameOverride&gt;{{ImageFilenameOverride}}&lt;/ImageFilenameOverride&gt;
+						&lt;/Images&gt;
+						&lt;QuantityDiscount Name="{{QuantityDiscount}}"/&gt;
+              			{{#if RelatedProducts}}
+						&lt;RelatedProducts&gt;
+              				{{#each RelatedProducts}}
+							&lt;CX ID="{{this}}"/&gt;
+              				{{/each}}
+						&lt;/RelatedProducts&gt;
+              			{{/if}}
+              			{{#if UpsellProducts}}
+						&lt;UpsellProducts DiscountPercentage="{{#if UpsellProductsDiscountPercentage}}{{replace UpsellProductsDiscountPercentage '%' ''}}{{else}}0.0{{/if}}"&gt;
+              				{{#each UpsellProducts}}
+							&lt;CX ID="{{this}}"/&gt;
+              				{{/each}}
+						&lt;/UpsellProducts&gt;
+              			{{/if}}
+              			{{#if RequiresProducts}}
+						&lt;RequiresProducts&gt;
+              				{{#each RequiresProducts}}
+							&lt;CX ID="{{this}}"/&gt;
+              				{{/each}}
+						&lt;/RequiresProducts&gt;
+              			{{/if}}
+						&lt;InventoryType&gt;
+							&lt;TrackInventoryBySizeAndColor&gt;{{TrackInventoryBySizeAndColor}}&lt;/TrackInventoryBySizeAndColor&gt;
+							&lt;WarehouseLocation/&gt;
+						&lt;/InventoryType&gt;
+						&lt;IsAKit&gt;{{IsAKit}}&lt;/IsAKit&gt;
+						&lt;ShowBuyButton&gt;{{ShowBuyButton}}&lt;/ShowBuyButton&gt;
+						&lt;Published&gt;{{Published}}&lt;/Published&gt;
+						&lt;RequiresRegistration&gt;{{RequiresRegistration}}&lt;/RequiresRegistration&gt;
+						&lt;HidePriceUntilCart&gt;{{HidePriceUntilCart}}&lt;/HidePriceUntilCart&gt;
+						&lt;IsCallToOrder&gt;{{IsCallToOrder}}&lt;/IsCallToOrder&gt;
+						&lt;ExcludeFromPriceFeeds&gt;{{ExcludeFromPriceFeeds}}&lt;/ExcludeFromPriceFeeds&gt;
+						&lt;RequiresTextOption&gt;{{RequiresTextOption}}&lt;/RequiresTextOption&gt;
+              			{{#if StoreMappings}}
+                        &lt;StoreMappings AutoCleanup="true"&gt;
+              				{{#each StoreMappings}}
+                        	&lt;Store StoreId="{{this}}" /&gt;
+              				{{/each}}
+                        &lt;/StoreMappings&gt;
+              			{{/if}}
+						&lt;Mappings AutoCleanup="true"&gt;
+              				{{#each Category}}
+							&lt;Entity EntityType="Category" XPath="{{this}}" /&gt;
+              				{{/each}}
+							&lt;Entity EntityType="Manufacturer" Name="{{Manufacturer}}" /&gt;
+							&lt;Entity EntityType="Distributor" Name="{{Distributor}}" /&gt;
+              				{{#each Section}}              				
+							&lt;Entity EntityType="Section" Name="{{this}}" /&gt;
+              				{{/each}}
+						&lt;/Mappings&gt;
+            &lt;ExtensionData&gt;{{SKU}}&lt;/ExtensionData&gt;
+            &lt;ExtensionData2&gt;{{ExtensionData2}}&lt;/ExtensionData2&gt;
+            &lt;ExtensionData3&gt;{{ExtensionData3}}&lt;/ExtensionData3&gt;
+            &lt;ExtensionData4&gt;{{lookup "StockOptions" ExtensionData4}}&lt;/ExtensionData4&gt;
+						&lt;Variants&gt;
+							&lt;Variant Action="{{#if VariantID}}Update{{else}}Add{{/if}}" ID="{{VariantID}}"&gt;
+								&lt;IsDefault&gt;1&lt;/IsDefault&gt;
+								&lt;Name&gt;{{Name}}&lt;/Name&gt;
+								&lt;Description&gt;&lt;![CDATA[{{Description}}]]&gt;&lt;/Description&gt;                         
+								{{#if ProductID}}&lt;ProductID&gt;{{ProductID}}&lt;/ProductID&gt;{{/if}}
+								&lt;GTIN&gt;{{GTIN}}&lt;/GTIN&gt;
+								&lt;Price&gt;{{Price}}&lt;/Price&gt;
+								&lt;SalePrice&gt;{{SalePrice}}&lt;/SalePrice&gt;
+								&lt;Weight&gt;{{Weight}}&lt;/Weight&gt;
+								&lt;MSRP&gt;{{MSRP}}&lt;/MSRP&gt;
+								&lt;Cost&gt;{{Cost}}&lt;/Cost&gt;
+								&lt;Dimensions&gt;
+									&lt;UOM&gt;IN&lt;/UOM&gt;
+									&lt;Length&gt;{{Length}}&lt;/Length&gt;
+									&lt;Width&gt;{{Width}}&lt;/Width&gt;
+									&lt;Height&gt;{{Height}}&lt;/Height&gt;
+								&lt;/Dimensions&gt;
+							&lt;/Variant&gt;
+						&lt;/Variants&gt;
+					&lt;/Product&gt;
+					{{/each}}
+				&lt;/AspDotNetStorefrontImport&gt;
+			</asp:XmlInputRequestString>
+		</asp:DoItUsernamePwd>
+	</soapenv:Body>
+</soapenv:Envelope>
